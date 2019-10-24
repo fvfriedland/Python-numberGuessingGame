@@ -1,0 +1,18 @@
+import random   #Here I'm just importing the random module.
+
+print('Guess the number, win nothing!')
+num = random.randrange(1,21) #I assigned the variable num to equal whatever the random number was, I originally had this command within the while loop but it changed the number with each guess.
+while True:
+    guess = input()         #Here I'm asking for the player to guess what the number is.
+    guess = int(guess)      #Since the input will take in strings, we had to tell python that the variable guess would be an integer.
+    print(num)              #I did this so I could easily test the elif statements
+    if guess == num:
+        print('WINNER')
+        exit()
+    elif guess < num:
+        print('Higher!')
+    elif guess > num:
+        print('Lower!')
+
+
+#I'm going to see about adding number of guesses, or "lives" later.
